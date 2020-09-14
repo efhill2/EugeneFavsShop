@@ -1,0 +1,59 @@
+﻿@using EugeneFavsShop.Models
+@model EugeneFavsShop.Models.Users
+@{
+    ViewData["Title"] = "Order";
+}
+
+<h1>Order</h1>
+<br />
+
+
+Welcome, @Model.FirstName
+<br />
+<br />
+What would you like to order?
+<br />
+<br />
+<form method="POST" action="/Home/OrderSummary">
+    <input type="radio" name="drinkselection" value="Timor Peaberry" /> Timor Peaberry.
+    <br />
+    <br />
+    <input type="radio" name="drinkselection" value="Malawi Sable Farms" /> Malawi Sable Farms.
+    <br />
+    <br />
+    <input type="radio" name="drinkchoice" value="Burundi Sable Farms" /> Burundi Sable Farms.
+    <br />
+    <br />
+    <input type="radio" name="drinkselection" value="Congo Lake Kiuu" /> Congo Lake Kiuu.
+    <br />
+    <br />
+    <input type="radio" name="drinkselection" value="West Java" /> West Java.
+    <br />
+    <br />
+    <input type="radio" name="drinkselection" value="Cameron Mt. Oku" /> Cameron Mt. Oku
+    <br />
+    <br />
+    <label for="drinksize"> Drink Size: </label>
+    <select type="text" name="drinksize">
+        <option value="Shot"> Shot (4 oz) </option>
+        <option value="XS"> Extra Small (6 oz) </option>
+        <option value="S"> Small (8 oz) </option>
+        <option value="M"> Medium (12 oz) </option>
+        <option value="L"> Large (16 oz) </option>
+    </select>
+    <br />
+    <br />
+    <input type="checkbox" name="userchoice" value="pickup" /> Pick-Up.
+    <br />
+    <br />
+    <label for="pickuptime">Pick Up Time: </label>
+    <input type="time" name="pickuptime" min=" 08:00" max="17:00">
+    <small>Open from 5am - 5pm </small>
+    <br />
+    <br />
+    <input type="checkbox" name="userchoice" value="delivery" /> Delivery.
+
+    <input type="submit" />
+
+
+</form>

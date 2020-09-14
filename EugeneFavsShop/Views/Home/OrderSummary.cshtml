@@ -1,0 +1,18 @@
+﻿@using EugeneFavsShop.Models
+@model  EugeneFavsShop.Models.Orders
+@{
+    ViewData["Title"] = "OrderSummary";
+}
+
+<h1>OrderSummary</h1>
+<br />
+
+@Model.FirstName    
+<br />
+You orderd a @Model.DrinkSize @Model.DrinkSelection.
+<br />
+You chose @Model.UserChoice
+<br />
+@Html.Raw(ViewBag.PickUpMessage)
+<br />
+@ViewBag.DeliveryMessage

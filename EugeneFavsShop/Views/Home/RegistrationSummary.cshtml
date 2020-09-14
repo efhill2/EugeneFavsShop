@@ -1,0 +1,19 @@
+﻿@model EugeneFavsShop.Models.Users
+@{
+    ViewData["Title"] = "RegistrationSummary";
+}
+
+<h1>RegistrationSummary</h1>
+
+<br />
+
+
+@ViewBag.Welcome
+<br />
+You're number is @Model.PhoneNumber, email is @Model.Email.
+<br />
+You're from @Model.City,@Model.State.
+<br />
+You decided to register because why lol @Model.Choice (^_^).
+<br />
+<p><a class="btn btn-default" href="/Home/Order"> Proceed to Order &raquo;</a></p>
