@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add Product</h1>
+
+<p>What would like to add to Products?</p>
+
+<form method="POST" action="/admin/Index" onsubmit=" return ValidateUser()">
+    Product Name: <input type="text" name="pname" required pattern="[A-Za-z]{1,40}" title="Use Letters Only" />
+    <br />
+    <br />
+    Quantity:  <input type="number" name="pquantity" required pattern="[0-9]{1,3}" title="Numbers Only" />
+    <br />
+    <br />
+    Price: <input type="number" name="pprice" required />
+    <br />
+    <br />
+    Product Description: <input type="text" name="pdescription" required />
+    <br />
+    <br />
+    <input type="submit" />
+</form>

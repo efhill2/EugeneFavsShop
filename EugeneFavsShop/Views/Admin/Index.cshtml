@@ -1,0 +1,18 @@
+﻿@model List<Products>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Product Index</h1>
+
+List Of Products
+<br />
+@foreach (Products products in Model)
+{
+    @*<a href="/Product/Detail?productID=@prodresults.ProductID">@prodresults.ProductName</a> @prodresults.Price;*@
+    @products.ProductName <a class="btn btn-light" href="/Admin/Edit?pID=@products.ProductID">Edit</a> <a class="btn btn-danger" href="/Admin/Delete?pID=@products.ProductID">Delete</a>
+    <br />
+    <br />
+}
+
+<a class="btn btn-light" href="/Admin/Add?">ADD</a>

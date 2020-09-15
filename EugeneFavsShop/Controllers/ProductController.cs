@@ -14,6 +14,7 @@ namespace EugeneFavsShop.Controllers
     {
         public IActionResult Index()
         {
+
             IDbConnection db = new SqlConnection("Server=.;Database=EugeneFavsShop;user id=sa; password=Inari2007");
             db.Open();
 
